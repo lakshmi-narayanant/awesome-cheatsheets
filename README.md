@@ -1,4 +1,4 @@
-> 超级速查表 - 编程语言、框架和开发工具的速查表，单个文件包含一切你需要知道的东西 :zap:
+Super Cheat Sheets - Cheat sheets for programming languages, frameworks and development tools that contain everything you need to know in a single file ⚡
 
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/skywind3000/awesome-cheatsheets) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/skywind3000/awesome-cheatsheets/blob/master/LICENSE)
 [![Backers on Open Collective](https://opencollective.com/awesome-cheatsheets/backers/badge.svg)](#backers) 
@@ -7,16 +7,15 @@
 [![](awesome.png)](https://github.com/skywind3000/awesome-cheatsheets)
 ​                                                                                      
 
-## 最好用的中文速查表（Cheatsheet）
+## The best Chinese cheat sheet（Cheatsheet）
 
-当年学习 Linux 时就是靠着一张常用命令小卡片，敲啥命令忘记了，经常拿起来看看，后来知道这玩意儿叫做速查表（Cheatsheet），于是开始有意识收集和整理各种常用的速查表。对于很多工具来说，看书和大篇大篇的文章都太浪费时间了，其实大部分时候，你只需要一张小巧的表格就够了。
+When I was learning Linux, I relied on a small card of commonly used commands. I forgot what command I typed. Look up the table. For many tools, reading books and voluminous articles is too time-consuming. In fact, most of the time, you only need a small form.
 
-最近看 LeCoupa 的 [LeCoupa/awesome-cheatsheets](https://github.com/LeCoupa/awesome-cheatsheets) 项目有所启发，感于网上中文资料匮乏，且质量参差不齐，决定做一个中文的 Cheatsheet 项目，收集整理常用的：编程语言、框架和开发工具的 Cheatsheet 进行收集和整理。数量不求多，但每个表都得做好做透，让你不用再网上漫无目标的搜索文章，一个简单的 Cheatsheet 文件就彻底满足你。
+Recently, I was inspired by LeCoupa’s [LeCoupa/awesome-cheatsheets](https://github.com/LeCoupa/awesome-cheatsheets) project. I felt that the online Chinese materials were scarce and the quality was uneven, so I decided to make a Chinese cheatsheet. Project, collect and organize commonly used Cheatsheets of programming languages, frameworks and development tools. The number is not high, but each table must be done thoroughly, so that you don't need to search for articles on the Internet aimlessly, a simple cheatsheet file will completely satisfy you.
 
+## :zap: content index
 
-## :zap:内容索引
-
-### :page_with_curl:编程语言
+### :page_with_curl: programming language
 
 - [Bash](languages/bash.sh)
 - [JavaScript](languages/javascript.md)
@@ -26,7 +25,7 @@
 - [Python](languages/python.md)
 - [Lua](languages/lua.lua)
 
-### :wrench:开发工具
+### :wrench: development tools
 
 - [Gdb](tools/gdb.txt)
 - [Adb](tools/adb.txt)
@@ -34,32 +33,33 @@
 - [Git](tools/git.txt)
 - [FFmpeg](tools/ffmpeg.sh)
 
-### :pencil:文本编辑
+
+### :pencil: text editor
 
 - [VIM](editors/vim.txt)
 - [Nano](editors/nano.txt)
 - [Emacs](editors/emacs.txt)
 - [Org Mode](editors/org.org)
 
-## :pray:感谢贡献
+## :pray:Thanks for the contribution
 
-本项目的存在，离不开参与贡献的网友们，感谢：
+The existence of this project is inseparable from the netizens who participated and contributed. Thanks to:
 
 <a href="https://github.com/skywind3000/awesome-cheatsheets/graphs/contributors"><img src="https://opencollective.com/awesome-cheatsheets/contributors.svg?width=890&button=false" /></a>
 
-希望把你的名字和头像列在这里么？欢迎把你熟悉的编程语言、框架和工具的常用知识点做成 cheatsheet 用 PR 发过来。
+Want to have your name and profile picture listed here? You are welcome to make a cheatsheet of common knowledge points about programming languages, frameworks and tools that you are familiar with and send it via PR.
 
 <!--
 
-### 支持者们
+### Supporters
 
-感谢支持者 🙏 [[成为支持者](https://opencollective.com/awesome-cheatsheets#backer)]
+Thanks to the supporters 🙏 [[Become a supporter](https://opencollective.com/awesome-cheatsheets#backer)]
 
 <a href="https://opencollective.com/awesome-cheatsheets#backers" target="_blank"><img src="https://opencollective.com/awesome-cheatsheets/backers.svg?width=890"></a>
 
 -->
 
-支持本项目，除了贡献代码，还能成为一名 sponsor，你的图标会显示在这里，点击可以跳转到你的主页 [[成为赞助者](https://opencollective.com/awesome-cheatsheets#sponsor)]
+To support this project, in addition to contributing code, you can also become a sponsor, your icon will be displayed here, click to jump to your homepage[[Become a sponsor](https://opencollective.com/awesome-cheatsheets# sponsor)]
 
 <a href="https://opencollective.com/awesome-cheatsheets/sponsor/0/website" target="_blank"><img src="https://opencollective.com/awesome-cheatsheets/sponsor/0/avatar.svg"></a>
 <a href="https://opencollective.com/awesome-cheatsheets/sponsor/1/website" target="_blank"><img src="https://opencollective.com/awesome-cheatsheets/sponsor/1/avatar.svg"></a>
