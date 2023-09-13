@@ -1,26 +1,26 @@
 ##############################################################################
-# GIT CHEATSHEET (中文速查表)  -  by albertwang21 (created on 2019/09/16)
+# GIT CHEATSHEET (english Quick Reference) - by albertwang21 (created on 2019/09/16)
 # Version: 1, Last Modified: 2019/09/16 18:00
 # https://github.com/skywind3000/awesome-cheatsheets
 ##############################################################################
 
 
 ##############################################################################
-# 配置
+#initialization
 ##############################################################################
 git config --global "Your Name"
 git config --global "Email Address"
-git config --global credential.helper store    保存密码(每次要输密码/重复输密码)
+git config --global credential.helper store   Save password (enter password every time/re-enter password)
 
 
 ##############################################################################
-# 初始化
+# initialization
 ##############################################################################
 git init
 
 
 ##############################################################################
-# 提交修改
+#Submit changes
 ##############################################################################
 git add <file>
 git add -u 提交work directory中所有已track的文件至staging area
