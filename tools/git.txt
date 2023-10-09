@@ -23,73 +23,73 @@ git init
 #Submit changes
 ##############################################################################
 git add <file>
-git add -u 提交work directory中所有已track的文件至staging area
+git add -u Stage all tracked files in the working directory for the staging area
 git commit -m "descriptions"
-git commit --amend 对最近一次的提交做内容修改
-git commit --amend --author "user_name <user_email>" 修改最近提交用户名和邮箱
+git commit --amend Make changes to the content of the most recent commit.
+git commit --amend --author "user_name <user_email>"Change the username and email for the most recent commit.
 
 
 ##############################################################################
-# 查看状态、比对
+# View status and compare
 ##############################################################################
-git status
-git status -s 文件状态缩略信息, 常见 A:新增; M:文件变更; ?:未track; D:删除
-git diff <file>
-git diff HEAD -- <file>                 查看工作区和版本库里面最新版本的区别
-git diff --check <file>                 检查是否有空白错误(regex:' \{1,\}$')
-git diff --cached <file>                查看已add的内容(绿M)
-git diff branch1 branch2 --stat         查看两个分支差异
-git diff branch1 branch2 <file...>      查看分支文件具体差异
+git status                                 # View the current status of the repository
+git status -s                             # View a short summary of the repository's status, with common file status abbreviations like A: Added, M: Modified, ?: Untracked, D: Deleted
+git diff <file>                           # View the differences for a specific file between the working directory and the last committed version
+git diff HEAD -- <file>                   # View the differences between the working directory and the latest version in the repository for a specific file
+git diff --check <file>                   # Check for whitespace errors in the specified file (regex: ' \{1,\}$')
+git diff --cached <file>                  # View the differences for a specific file that has been added (staged) for commit (indicated by green M)
+git diff branch1 branch2 --stat           # View the statistics of the differences between two branches
+git diff branch1 branch2 <file...>        # View the specific differences in files between two branches
 
 ##############################################################################
-# 查看历史版本、历史操作
+# View history versions and operations
 ##############################################################################
-git log
-git reflog
-git log -n                  最近n条的提交历史
-git log <branch_name> -n    分支branch_name最近n条的提交历史
-git log --stat              历次commit的文件变化
-git log --shortstat         对比--stat只显示最后的总文件和行数变化统计(n file changed, n insertions(+), n deletion(-))
-git log --name-status       显示新增、修改、删除的文件清单
-git log lhs_hash..rhs_hash  对比两次commit的变化(增删的主语为lhs, 如git log HEAD~2..HEAD == git log HEAD -3)
-git log -p                  历次commit的内容增删
-git log -p -W               历次commit的内容增删, 同时显示变更内容的上下文
-git log origin/EI-1024 -1 --stat -p -W 查看远端分支EI-1024前一次修改的详细内容
-git log origin/master..dev --stat -p -W 查看本地dev分支比远端master分支变化(修改)的详细内容
+git log                                 # View the commit history
+git reflog                             # View the reference log, which tracks reference updates
+git log -n                             # View the recent n commit history
+git log <branch_name> -n               # View the recent n commit history for a specific branch
+git log --stat                         # View the file changes in each commit
+git log --shortstat                    # Display a summary of file and line changes for each commit (e.g., "n files changed, n insertions(+), n deletions(-)")
+git log --name-status                  # Show a list of added, modified, and deleted files for each commit
+git log lhs_hash..rhs_hash              # Compare the changes between two commits (deletions and additions are relative to lhs, e.g., git log HEAD~2..HEAD == git log HEAD -3)
+git log -p                              # View the content changes for each commit
+git log -p -W                           # View the content changes for each commit and display context
+git log origin/EI-1024 -1 --stat -p -W  # View detailed content of the previous change for the remote branch EI-1024
+git log origin/master..dev --stat -p -W # View detailed content changes (modifications) of the local branch dev compared to the remote master branch
 
-git log <branch_name> --oneline   对提交历史单行排列
-git log <branch_name> --graph     对提交历史图形化排列
-git log <branch_name> --decorate  对提交历史关联相关引用, 如tag, 本地远程分支等
-git log <branch_name> --oneline --graph --decorate 拼接一下, 树形化显示历史
-git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen%ai(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit 同上, 建议alais保存
+git log <branch_name> --oneline        # List commit history in one line format
+git log <branch_name> --graph          # Display the commit history in a graphical format
+git log <branch_name> --decorate       # Show related references in the commit history, such as tags, local remote branches, etc.
+git log <branch_name> --oneline --graph --decorate  # Combine the above options for a tree-like display of history
+git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen%ai(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit # Recommended alias format
 
-git log --pretty=format 常用的选项(摘自progit_v2.1.9)
-%H 提交对象（commit）的完整哈希字串
-%h 提交对象的简短哈希字串
-%T 树对象（tree）的完整哈希字串
-%t 树对象的简短哈希字串
-%P 父对象（parent）的完整哈希字串
-%p 父对象的简短哈希字串
-%an 作者（author）的名字
-%ae 作者的电子邮件地址
-%ad 作者修订日期（可以用 --date= 选项定制格式）
-%ar 作者修订日期，按多久以前的方式显示
-%cn 提交者（committer）的名字
-%ce 提交者的电子邮件地址
-%cd 提交日期
-%cr 提交日期，按多久以前的方式显示
-%s 提交说明
+Common options for git log --pretty=format (excerpt from progit_v2.1.9):
+%H Commit object's full hash
+%h Commit object's abbreviated hash
+%T Tree object's full hash
+%t Tree object's abbreviated hash
+%P Parent object's full hash
+%p Parent object's abbreviated hash
+%an Author's name
+%ae Author's email address
+%ad Author's commit date (can be customized with the --date= option)
+%ar Author's commit date displayed in relative time
+%cn Committer's name
+%ce Committer's email address
+%cd Commit date
+%cr Commit date displayed in relative time
+%s Commit message
 
-git log --since --after     显示时间之后的提交
-git log --until --before    显示时间之前的提交
-git --author                显示指定作者的提交
-git --committer             显示指定committer的提交(注:committer不一定是author)
-git log -S [keyword]        仅显示添加或移除了某个关键字的提交(某些场景比单独git log -p | grep [keyword] 好用很多)
-git log origin/b3.3/master --author=yx-ren --since="2019-10-01" --before="2019-11-01" 查看某作者在某发布版本最近一个月的提交, 常见于线上背锅
-git log origin/b3.0/master --author=some_leave --since="1 month ago" 查看某刚离职同事过去一个月的提交, 常见于背锅
-git log --since=1.weeks     过去一周的提交(写周报的时候可以看看我这一周干了啥)
-git log --since=1.days      过去一天的提交(下班的时候可以看看我这一天干了啥)
-git log --since="1 weeks 2 days 3 hours 40 minutes 50 seconds ago" 过去1周2天3小时40分50秒之内的提交
+git log --since --after                # Show commits after a certain date or time
+git log --until --before              # Show commits before a certain date or time
+git --author                          # Show commits by a specific author
+git --committer                       # Show commits by a specific committer (note: committer may not be the author)
+git log -S [keyword]                  # Show commits that add or remove a specific keyword (useful in some cases over git log -p | grep [keyword])
+git log origin/b3.3/master --author=yx-ren --since="2019-10-01" --before="2019-11-01"  # View commits by a specific author in the past month for a particular release version
+git log origin/b3.0/master --author=some_leave --since="1 month ago"                  # View commits by a recently departed colleague in the past month
+git log --since=1.weeks               # Show commits from the past week (useful for writing weekly reports)
+git log --since=1.days                # Show commits from the past day (useful at the end of the day to review what you did)
+git log --since="1 weeks 2 days 3 hours 40 minutes 50 seconds ago"  # Show commits from a specified time frame
 
 
 ##############################################################################
